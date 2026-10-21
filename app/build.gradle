@@ -1,0 +1,33 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.ccos.tv.homepage'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'com.ccos.tv.homepage'
+        // Below 26 so the boot watch may run as a plain background service on Android 8.
+        minSdk 21
+        targetSdk 25
+        versionCode 11
+        versionName '2.0'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    lint {
+        disable 'ExpiredTargetSdkVersion'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
