@@ -22,8 +22,11 @@ This app is that package. It has:
 - **`LaunchActivity`**: an invisible activity that starts the launcher
   (`com.coocaa.tvhome/com.gathin.tvhome.MainActivity`) and finishes. If the launcher is missing, it
   starts the stock Coocaa home instead, so Home never leads nowhere.
-- **`BootReceiver` and `BootWatchService`**: Coocaa's own boot flow opens the stock home after the boot
-  video, whatever the properties say. For two minutes after boot, every 2 seconds, the service checks
+- **`BootReceiver` and `BootWatchService`**: on boot the receiver writes
+  `persist.service.homepage.pkg` / `.cls` back to this package. The framework sometimes replaces them
+  with the literal strings `home[0]` / `home[1]`, and the Home key then does nothing. Coocaa's own boot
+  flow also opens the stock home after the boot video, whatever the properties say. For two minutes
+  after boot, every 2 seconds, the service checks
   the front app (`sky.current.apk`). When it is the stock home, it asks `com.tianci.system` to go Home
   (`content://com.tianci.provider`, method `COMMON`, `gotoHomePage`), because Coocaa blocks activity
   starts from background apps. It stops as soon as the launcher or any other app is in front, then

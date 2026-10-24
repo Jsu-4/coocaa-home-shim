@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 
+import java.lang.reflect.Method;
+
 public class BootReceiver extends BroadcastReceiver {
 
     /**
@@ -36,6 +38,10 @@ public class BootReceiver extends BroadcastReceiver {
         boolean boot = Intent.ACTION_LOCKED_BOOT_COMPLETED.equals(action) || Intent.ACTION_BOOT_COMPLETED.equals(action);
         if (!boot && !ACTION_WATCH.equals(action)) return;
         if (boot) {
+            // The framework sometimes writes the literal strings home[0] / home[1] here at boot, and then
+            // gotoHomePage follows those and the Home key does nothing. Put this package back first.
+            setProp("persist.service.homepage.pkg", "com.ccos.tv.homepage");
+            setProp("persist.service.homepage.cls", "com.ccos.tv.homepage.LaunchActivity");
             // Coocaa's standby force-stops every app but the homepage package (this one), and a stopped
             // launcher gets no boot broadcast of its own; an explicit one that includes stopped packages wakes it.
             context.sendBroadcast(new Intent(ACTION_LAUNCHER_BOOT)
@@ -43,5 +49,14 @@ public class BootReceiver extends BroadcastReceiver {
                     .addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES));
         }
         context.startService(new Intent(context, BootWatchService.class));
+    }
+
+    private static void setProp(String key, String value) {
+        try {
+            Class<?> c = Class.forName("android.os.SystemProperties");
+            Method set = c.getMethod("set", String.class, String.class);
+            set.invoke(null, key, value);
+        } catch (ReflectiveOperationException | RuntimeException ignored) {
+        }
     }
 }
