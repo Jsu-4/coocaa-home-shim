@@ -1,0 +1,27 @@
+{
+  "columns": 4,
+  "dock_apps": [
+    "com.example.smartapp",
+    "com.mygithub0.tvbox0.osdkitkat",
+    "com.github.tvbox.osc.tk",
+    "com.xiaodianshi.tv.yst"
+  ],
+  "source_panel_service": "com.coocaa.os.ccosservice/com.coocaa.os.centerintegration.service.CenterService",
+  "source_panel_action": "com.coocaa.intent.action.CONTROL_CENTER",
+  "source_panel_extra": "control_center_command=100",
+  "coocaa_sources": true,
+  "library_apps": [
+    "com.example.smartapp"
+  ],
+  "app_library": true,
+  "show_greeting": false,
+  "wallpaper": true,
+  "ambient_glow": false,
+  "app_glow": false,
+  "wallpaper_true_color": true,
+  "dock_glass": true,
+  "glass_style": "glass",
+  "dock_opacity": 30,
+  "wallpaper_rotation_minutes": 15,
+  "wallpaper_order": "sequential"
+}

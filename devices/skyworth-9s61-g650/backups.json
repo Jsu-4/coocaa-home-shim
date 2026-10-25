@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "repository": "Jsu-4/coocaa-home-shim",
+  "release_tag": "tv-backups-2026-10-25",
+  "device": {
+    "manufacturer": "Skyworth",
+    "model": "9S61_G650",
+    "android": "8.0.0",
+    "sdk": 26
+  },
+  "launcher": {
+    "package": "com.coocaa.tvhome",
+    "activity": "com.gathin.tvhome.MainActivity",
+    "version": "2.7",
+    "version_code": 8,
+    "signing_certificate_sha256": "ad494274898bc92275455e4b8ffd8d28d86e39ef1384d4cf43fbf402155c2175",
+    "source_repository": "https://github.com/Gathin23/cleanyourtv",
+    "source_commit": "eb0131a32fd8567086f39002f1782f7c1b078ca6"
+  },
+  "recommended_profile": "rotation-short-label",
+  "profiles": [
+    {
+      "id": "glass",
+      "title": "猫咪通透玻璃（原始字体）",
+      "recommended": false,
+      "description": "原始桌面字体，单张亲昵壁纸，通透玻璃底栏。",
+      "original_filename": "202610250941_猫咪通透玻璃布局.zip",
+      "asset_name": "skyworth-9s61-g650-glass-20261025.zip",
+      "download_url": "https://github.com/Jsu-4/coocaa-home-shim/releases/download/tv-backups-2026-10-25/skyworth-9s61-g650-glass-20261025.zip",
+      "bytes": 4692539,
+      "sha256": "bb95b6452082cb386eade416145ab973600365dba0b4760d74be76e65825be57",
+      "config": "configs/glass.json",
+      "members": {
+        "layout/wallpaper.jpg": "a2f06fefd5324d79effc18e6f830fa48f0795d838cbd91cd702bce05ece6a686",
+        "layout/config.json": "7aad947711e3bde347c2623eea861f4885fdf1c1a7c673990043facdcae43ee8",
+        "launcher.apk": "199237aa82f465b1642ceca7fbb7eb62f1b936202abb7a6b73bb034a5dbe81ef",
+        "preview.png": "77b804622db497e7ea58c65f0f9ab4b53d2237995edbd4d817a1f64bc54eb5d1",
+        "manifest.json": "537cf36ab53a35996ce41c6709d348043e413e5231ac93bb824cbcc4ab940953",
+        "恢复说明.txt": "21ae610885033b4834f12e3203e3041c1962bb7dd8c12954e283ed41aaf40c33"
+      }
+    },
+    {
+      "id": "readable",
+      "title": "清晰字版 · 单张壁纸",
+      "recommended": false,
+      "description": "时间60sp、日期20sp、应用标题26sp，单张亲昵壁纸。",
+      "original_filename": "202610251007_猫咪通透玻璃-清晰字版备份.zip",
+      "asset_name": "skyworth-9s61-g650-readable-20261025.zip",
+      "download_url": "https://github.com/Jsu-4/coocaa-home-shim/releases/download/tv-backups-2026-10-25/skyworth-9s61-g650-readable-20261025.zip",
+      "bytes": 4700677,
+      "sha256": "8c60a9353da27846ea099f1222b0ed361988d4d36c47f616cc03bb5cca0fa308",
+      "config": "configs/readable.json",
+      "members": {
+        "launcher.apk": "51ebc9e3e626a36cdd0a9a7f5bd9c7f97c717b12d25f1df2d4c63b3d4a93f80d",
+        "layout/config.json": "7aad947711e3bde347c2623eea861f4885fdf1c1a7c673990043facdcae43ee8",
+        "layout/wallpaper.jpg": "a2f06fefd5324d79effc18e6f830fa48f0795d838cbd91cd702bce05ece6a686",
+        "preview.png": "cb44af4b8552a8be4d57ed798034c6ee9211a7b14ccc5819b9262386c5c93d8e",
+        "manifest.json": "399f445456c2cce9e7013251ebd63cf321fbf41eab8e6599e72dccd24cd9ea78",
+        "typography.patch": "708dba92caddc750043d9f35a8adcf72417dbc8032f5c2f0df26dbc5a5d7478e",
+        "恢复说明.txt": "8a586b05ddc7890769e2743c828223c2f0c7e4396dda1cf23d281f583932aacc"
+      }
+    },
+    {
+      "id": "rotation",
+      "title": "清晰字版 · 三图15分钟轮换",
+      "recommended": false,
+      "description": "三张猫咪图按顺序轮换，约15分钟一张。",
+      "original_filename": "202610251014_猫咪三图间隔15分钟轮换.zip",
+      "asset_name": "skyworth-9s61-g650-rotation-20261025.zip",
+      "download_url": "https://github.com/Jsu-4/coocaa-home-shim/releases/download/tv-backups-2026-10-25/skyworth-9s61-g650-rotation-20261025.zip",
+      "bytes": 10680071,
+      "sha256": "4167bc81197d677623f886633b7c0f079f290e5558a0b054eacb064f27b3d9eb",
+      "config": "configs/rotation.json",
+      "members": {
+        "launcher.apk": "51ebc9e3e626a36cdd0a9a7f5bd9c7f97c717b12d25f1df2d4c63b3d4a93f80d",
+        "layout/wallpaper.jpg": "a2f06fefd5324d79effc18e6f830fa48f0795d838cbd91cd702bce05ece6a686",
+        "typography.patch": "708dba92caddc750043d9f35a8adcf72417dbc8032f5c2f0df26dbc5a5d7478e",
+        "layout/config.json": "af145c3d8ab441129361e39cc71567c47e8602c26a8142a9c24b836f3eb2f63e",
+        "preview.png": "6b8f08e8574670cbfbfa5f907ba4f513c57aa0d34e55f188602c8de15b809580",
+        "layout/wallpapers/01-playful.png": "de7aaa30fa0bdca8b77922cdf973db79012665eab4d3a20274ce23e969fd4e4a",
+        "layout/wallpapers/02-cuddle.png": "a2f06fefd5324d79effc18e6f830fa48f0795d838cbd91cd702bce05ece6a686",
+        "layout/wallpapers/03-chase.png": "85f16afd76006fa7c58fdab8410450932e9964080f065485bbd2ac18c01a2ed7",
+        "manifest.json": "823e3de521a552ba51a88722ec0f25944b44efd1b0eb2b74fe45c381071339c5",
+        "恢复说明.txt": "1fafef72492c8f168318790941a3abde76cc472b4b18466c7f79a38b36a27deb"
+      }
+    },
+    {
+      "id": "rotation-short-label",
+      "title": "三图轮换 · 影视仓简称（当前推荐）",
+      "recommended": true,
+      "description": "三图15分钟轮换，影视仓V3在桌面显示为影视仓。",
+      "original_filename": "202610251020_猫咪三图轮换-影视仓简称.zip",
+      "asset_name": "skyworth-9s61-g650-rotation-short-label-20261025.zip",
+      "download_url": "https://github.com/Jsu-4/coocaa-home-shim/releases/download/tv-backups-2026-10-25/skyworth-9s61-g650-rotation-short-label-20261025.zip",
+      "bytes": 10683982,
+      "sha256": "71040a20ad2e26211e63ab19e6399c7dbdaab2f57624a0cf480dc237bbaab993",
+      "config": "configs/rotation-short-label.json",
+      "members": {
+        "launcher.apk": "51ebc9e3e626a36cdd0a9a7f5bd9c7f97c717b12d25f1df2d4c63b3d4a93f80d",
+        "layout/wallpaper.jpg": "a2f06fefd5324d79effc18e6f830fa48f0795d838cbd91cd702bce05ece6a686",
+        "typography.patch": "708dba92caddc750043d9f35a8adcf72417dbc8032f5c2f0df26dbc5a5d7478e",
+        "layout/config.json": "f3b5e3031d5a600b85c2cb8d27c8a6154f4eeda367a6b95cc56a217cfdfbf62e",
+        "preview.png": "ce939ea9a15d596b7263847c0011d164d0700fa3cf1f2801394508c22f905d47",
+        "layout/wallpapers/01-playful.png": "de7aaa30fa0bdca8b77922cdf973db79012665eab4d3a20274ce23e969fd4e4a",
+        "layout/wallpapers/02-cuddle.png": "a2f06fefd5324d79effc18e6f830fa48f0795d838cbd91cd702bce05ece6a686",
+        "layout/wallpapers/03-chase.png": "85f16afd76006fa7c58fdab8410450932e9964080f065485bbd2ac18c01a2ed7",
+        "manifest.json": "26cb5001e288f126f343483d441384f7f3ec5d3c5156e598731fc732376be414",
+        "恢复说明.txt": "c0a1bba72a337f25ebc153fb76074845679473aaf3d18aaa65729cbc2ecea456"
+      }
+    }
+  ]
+}

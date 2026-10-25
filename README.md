@@ -1,5 +1,15 @@
 # coocaa-home-shim
 
+## 本人电视的桌面备份与恢复
+
+本 fork 还保存创维／酷开 **9S61_G650，Android 8.0** 的四套桌面恢复配置。
+**让 AI 恢复或切换桌面时，从 [设备恢复指南](devices/skyworth-9s61-g650/README.md) 开始。**
+四个原始 ZIP 在 [2026-10-25 备份 Release](https://github.com/Jsu-4/coocaa-home-shim/releases/tag/tv-backups-2026-10-25) 中，
+索引和 SHA-256 校验值随源码保存。当前推荐：三图每 15 分钟轮换、清晰字体、应用简称“影视仓”。
+
+这部分恢复的是桌面 APK、布局和壁纸；不是整机系统或视频应用数据备份。
+下方保留上游 Home shim 的原始说明。
+
 A tiny Android app (about 15 KB, no internet permission) that lets the
 [Clean Your TV](https://github.com/Gathin23/cleanyourtv) launcher be Home on Skyworth's China-market
 TVs running **Coocaa OS** (酷开系统).

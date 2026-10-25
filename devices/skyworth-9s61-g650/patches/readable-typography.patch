@@ -1,0 +1,156 @@
+diff --git a/launcher/app/src/main/res/layout/activity_main.xml b/launcher/app/src/main/res/layout/activity_main.xml
+index 3980580..df13e37 100644
+--- a/launcher/app/src/main/res/layout/activity_main.xml
++++ b/launcher/app/src/main/res/layout/activity_main.xml
+@@ -117,9 +117,14 @@
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textColor="#FFFFFFFF"
+-            android:textSize="48sp"
+-            android:fontFamily="@string/font_light"
+-            android:letterSpacing="-0.02"
++            android:textSize="26sp"
++            android:fontFamily="sans-serif-medium"
++            android:textStyle="bold"
++            android:letterSpacing="0"
++            android:shadowColor="#55000000"
++            android:shadowDx="0"
++            android:shadowDy="1.5"
++            android:shadowRadius="3"
+             android:includeFontPadding="false"
+             android:singleLine="true" />
+ 
+@@ -192,35 +197,46 @@
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+-                    android:orientation="horizontal"
+-                    android:baselineAligned="true">
++                    android:orientation="vertical">
+ 
+-                    <TextClock
+-                        android:id="@+id/clock"
+-                        android:layout_width="wrap_content"
+-                        android:layout_height="wrap_content"
+-                        android:format12Hour="h:mm"
+-                        android:format24Hour="HH:mm"
+-                        android:textColor="#FFFFFFFF"
+-                        android:textSize="52sp"
+-                        android:fontFamily="@string/font_light"
+-                        android:letterSpacing="-0.04"
+-                        android:includeFontPadding="false" />
+-
+-                    <TextClock
+-                        android:id="@+id/ampm"
++                    <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+-                        android:layout_marginStart="6dp"
+-                        android:layout_gravity="bottom"
+-                        android:layout_marginBottom="8dp"
+-                        android:format12Hour="a"
+-                        android:format24Hour=""
+-                        android:textColor="#B3FFFFFF"
+-                        android:textSize="15sp"
+-                        android:fontFamily="@string/font_medium"
+-                        android:letterSpacing="0.08"
+-                        android:textAllCaps="true" />
++                        android:orientation="horizontal"
++                        android:baselineAligned="true">
++
++                        <TextClock
++                            android:id="@+id/clock"
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                            android:format12Hour="h:mm"
++                            android:format24Hour="HH:mm"
++                            android:textColor="#FFFFFFFF"
++                            android:textSize="60sp"
++                            android:fontFamily="sans-serif-medium"
++                            android:letterSpacing="0"
++                            android:shadowColor="#55000000"
++                            android:shadowDx="0"
++                            android:shadowDy="1.5"
++                            android:shadowRadius="3"
++                            android:includeFontPadding="false" />
++
++                        <TextClock
++                            android:id="@+id/ampm"
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                            android:layout_marginStart="6dp"
++                            android:layout_gravity="bottom"
++                            android:layout_marginBottom="8dp"
++                            android:format12Hour="a"
++                            android:format24Hour=""
++                            android:textColor="#B3FFFFFF"
++                            android:textSize="15sp"
++                            android:fontFamily="@string/font_medium"
++                            android:letterSpacing="0.08"
++                            android:textAllCaps="true" />
++
++                    </LinearLayout>
+ 
+                     <View
+                         android:id="@+id/clockDivider"
+@@ -230,14 +246,13 @@
+                         android:layout_marginStart="16dp"
+                         android:layout_marginEnd="16dp"
+                         android:layout_marginBottom="8dp"
++                        android:visibility="gone"
+                         android:background="#33FFFFFF" />
+ 
+                     <LinearLayout
+-                        android:layout_width="0dp"
+-                        android:layout_weight="1"
++                        android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+-                        android:layout_gravity="bottom"
+-                        android:layout_marginBottom="9dp"
++                        android:layout_marginTop="8dp"
+                         android:orientation="vertical">
+ 
+                         <!-- Shamsi date ("27 Mehr 1405"), shown when shamsi_date is on. -->
+@@ -266,10 +281,15 @@
+                             android:ellipsize="end"
+                             android:format12Hour="@string/date_format_home"
+                             android:format24Hour="@string/date_format_home"
+-                            android:textColor="#A6FFFFFF"
+-                            android:textSize="14sp"
+-                            android:fontFamily="@string/font_regular"
+-                            android:letterSpacing="0.14"
++                            android:textColor="#FFFFFFFF"
++                            android:textSize="20sp"
++                            android:fontFamily="sans-serif"
++                            android:letterSpacing="0"
++                            android:shadowColor="#55000000"
++                            android:shadowDx="0"
++                            android:shadowDy="1.5"
++                            android:shadowRadius="3"
++                            android:includeFontPadding="false"
+                             android:textAllCaps="true" />
+ 
+                         <!-- Lunar date ("Lunar 13/9 · Year of the Horse"), shown when lunar_date is on. -->
+@@ -316,8 +336,8 @@
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentEnd="true"
+-                android:layout_alignBottom="@id/leftBlock"
+-                android:layout_marginBottom="6dp"
++                android:layout_alignParentTop="true"
++                android:layout_marginTop="18dp"
+                 android:clipChildren="false"
+                 android:clipToPadding="false"
+                 android:orientation="horizontal">
+diff --git a/launcher/app/src/main/res/values-zh-rCN/strings.xml b/launcher/app/src/main/res/values-zh-rCN/strings.xml
+index 22517e8..d9db83e 100644
+--- a/launcher/app/src/main/res/values-zh-rCN/strings.xml
++++ b/launcher/app/src/main/res/values-zh-rCN/strings.xml
+@@ -37,6 +37,7 @@
+     <string name="not_available">此电视不支持该功能</string>
+     <string name="cant_open">无法打开 %1$s</string>
+     <string name="date_format">M月d日 EEEE</string>
++    <string name="date_format_home">M月d日 · EEEE</string>
+     <string name="stats_cpu">CPU %1$d%%</string>
+     <string name="stats_memory">内存 %1$d / %2$d MB</string>
+     <string name="stats_storage">存储剩余 %1$s</string>
