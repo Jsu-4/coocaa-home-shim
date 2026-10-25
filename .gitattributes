@@ -1,0 +1,3 @@
+# Unified-diff context records intentionally include a leading space on blank lines.
+# Keep archived patches byte-for-byte rather than treating their records as source whitespace.
+*.patch -whitespace
